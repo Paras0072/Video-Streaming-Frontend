@@ -10,6 +10,7 @@ const Login = ({ setToken }) => {
     try {
       const res = await login(username, password);
       setToken(res.data.token);
+      alert("Login successful! ");
       console.log("User Logged In");
     } catch (error) {
       console.error("Error logging in", error);
